@@ -58,6 +58,12 @@ app.get('/bad',(req, res) => {
   res.send('error: Unable to response to ur request');
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs',{
+    welcomeMessage: 'Welcome to my projects'
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
