@@ -10,9 +10,9 @@ hbs.registerPartials(__dirname + '/views/partials');
 //view engine 'hbs'
 app.set('view engine', 'hbs');  // we want to use hbs view engine
 //use hbs helper for the same repeated data
-app.use((req, res, next) => {
-  res.render('maintenance.hbs');
-});
+// app.use((req, res, next) => {
+//   res.render('maintenance.hbs');
+// });
 
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear();
