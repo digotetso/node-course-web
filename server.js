@@ -3,7 +3,7 @@ const hbs = require('hbs');
 var fs = require('fs');
 var app = express(); // initialize app
 
-
+const port = process.env.PORT || 3000; // object that stores all environment as key/value pairs
 //use partial for duplicate content such as footer , dates etc...
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -58,6 +58,6 @@ app.get('/bad',(req, res) => {
   res.send('error: Unable to response to ur request');
 });
 
-app.listen(3000, () => {
-  console.log('server is up on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
